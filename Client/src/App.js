@@ -5,7 +5,7 @@ import FormGames from "./components/FormGames/FormGames";
 import "./style.css";
 import Detail from "./components/Details/details";
 import axios from 'axios';
-axios.defaults.baseURL = 'http://localhost:3001/';
+axios.defaults.baseURL = 'https://deploy2-production-a014.up.railway.app/platforms';
 
 function App() {
   return (
