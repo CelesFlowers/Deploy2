@@ -3,14 +3,15 @@ const { conn } = require('./src/db.js');
 const {getAllGenres} = require('./src/controllers/ApyAndDb/getGenreData')
 const {insertGamesDb} = require('./src/controllers/ApyAndDb/insertGamesApiDB')
 const {getAllPlatforms} = require('./src/controllers/ApyAndDb/getPlatforms')
-const PORT = 3001;
+//const PORT = 3001;
+require ('dotenv').config();
 
 
 conn.sync({ alter: true }).then(() => {
   // getAllGenres()
   // getAllPlatforms()
   // insertGamesDb()
-  app.listen(3001, () => {
-  console.log('%s listening at 3001'); // eslint-disable-line no-console
+  app.listen(process.env.PORT, () => {
+  console.log('%s listening at', process.env.PORT); // eslint-disable-line no-console
   });
 }); 
