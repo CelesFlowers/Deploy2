@@ -7,7 +7,7 @@ const {getAllPlatforms} = require('./src/controllers/ApyAndDb/getPlatforms')
 require ('dotenv').config();
 
 
-conn.sync({ alter: true }).then(() => {
+conn.sync({ force: true }).then(() => {
   // getAllGenres()
   // getAllPlatforms()
   // insertGamesDb()
